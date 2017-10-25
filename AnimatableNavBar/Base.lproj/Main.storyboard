@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IqE-qm-kFN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Bdb-sY-IyF">
+            <objects>
+                <navigationController id="IqE-qm-kFN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="flo-vE-CPe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q5j-qi-FSr" kind="relationship" relationship="rootViewController" id="zkN-Tc-tzF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhD-rQ-DN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-873" y="91"/>
+        </scene>
+        <!--My title-->
+        <scene sceneID="4hD-ZQ-TGc">
+            <objects>
+                <viewController id="q5j-qi-FSr" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pyh-E3-7bn"/>
+                        <viewControllerLayoutGuide type="bottom" id="5hI-Qd-xgQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LBA-f7-SMn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-gQ-3E7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CKc-s3-pT4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alf-xa-QL6">
+                                <rect key="frame" x="158.5" y="318.5" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="changeColor" destination="q5j-qi-FSr" eventType="touchUpInside" id="Vti-L9-JxP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="alf-xa-QL6" firstAttribute="centerY" secondItem="LBA-f7-SMn" secondAttribute="centerY" id="2Rd-2p-QNA"/>
+                            <constraint firstItem="wPP-gQ-3E7" firstAttribute="top" secondItem="LBA-f7-SMn" secondAttribute="top" id="Aw0-WX-Kxr"/>
+                            <constraint firstItem="alf-xa-QL6" firstAttribute="centerX" secondItem="LBA-f7-SMn" secondAttribute="centerX" id="Cxa-7b-3HX"/>
+                            <constraint firstItem="wPP-gQ-3E7" firstAttribute="leading" secondItem="LBA-f7-SMn" secondAttribute="leading" id="T53-oU-FDx"/>
+                            <constraint firstAttribute="trailing" secondItem="wPP-gQ-3E7" secondAttribute="trailing" id="yCo-YJ-eBB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My title" id="bfs-J5-vO5">
+                        <barButtonItem key="leftBarButtonItem" title="Bar button 1" id="gE7-KJ-ZXn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Bar 2" id="fwY-Bh-k7D"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animatedView" destination="wPP-gQ-3E7" id="B49-W1-h7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHg-LP-UDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="92"/>
+        </scene>
+    </scenes>
+</document>
